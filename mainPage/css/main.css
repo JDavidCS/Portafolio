@@ -1,0 +1,216 @@
+@font-face {
+    font-family: "PlayBold";
+    src: url("../font/Play-Bold.ttf");
+}
+@font-face {
+    font-family: "Play";
+    src: url("../font/Play-Regular.ttf");
+}
+
+@font-face {
+    font-family: "PT-mono";
+    src: url("../font/PTMono-Regular.ttf");
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+    background-color: #000;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    top: 0;
+    padding: 0 10px;
+    z-index: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    transition-property: all;
+    transition: 1s ease;
+}
+
+header h2{
+    font-size: calc(3vmin + 0.2em);
+    color: #fff;
+    text-align: center;
+    font-family: 'PT-mono';
+    letter-spacing: 0.4em;
+    font-weight: 100;
+}
+
+.infoLayer{
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    font-family: 'PT-mono';
+    color: #fff;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.infoLayer h1{
+    font-size: calc(10vmin + 1.9em);
+    /* margin-bottom: 20vh; */
+    margin: 0;
+    padding-top: 5%;
+    text-align: center;
+    font-weight: 600;
+}
+.downloadA{
+    text-decoration: none;
+}
+.downloadCV{
+    position: relative;
+    font-size: calc(1vmin + 0.7em);
+    /* border-radius: 45px; */
+    font-family: 'PT-mono';
+    height: 3.3em;
+    width: 15em;
+    /* padding: 1em 3em; */
+    color: #fff;
+    background-color: transparent;
+    background-color: #0006;
+    border: solid 2px #fff;
+    transition: .5s ease;
+    transition-property: background-color;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.downloadCV p{
+    margin: 0;
+}
+
+.downloadCV svg{
+    position: relative;
+    fill: #fff;
+}
+
+.downloadCV:hover{
+    background-color: #000;
+    box-shadow: 0 0px 5px 1px white;
+}
+
+main{
+    position: relative;
+    height: 105vh;
+    min-height: 650px;
+    width: 100%;
+    max-width: 210vh;
+    background-color: black;
+    margin: auto;
+    overflow: hidden;
+}
+.Layers{
+    perspective: 100px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding-top: calc((-1.25 * 100vh) + 850px);
+    /* padding-top: 5%; */
+    /* padding-top: calc((-1.20 * 100%) + 850px); */
+}
+.landscape{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, #000, #230351 15%, #3e0581 50%, #050335 90%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* filter: brightness(.7); */
+}
+.landscape li{
+    display: flex;
+    justify-content: center;
+}
+.landscape img{
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+.trees{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+.trees img{
+    position: absolute;
+    min-width: 1000px;
+    height: 100%;
+    width: 100%;
+}
+
+.first{
+    bottom: -1px;
+}
+
+.mount1{
+    left: 0;  
+}
+
+.mount2{
+    right: 0;
+}
+
+.mount3{
+    left: 0;
+}
+
+.mountain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.mountain img{
+    user-select: none;
+    position: absolute;
+    width: 100%;
+}
+.mount4 img{
+    height: auto;
+    object-fit: cover;
+}
+
+.Layers{
+    z-index: 100;
+}
+
+
+
+
+
+
+
+.more{
+    height: 100vh;
+    width: 100%;
+}
