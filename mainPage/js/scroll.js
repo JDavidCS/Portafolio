@@ -2,9 +2,10 @@ const parallax = document.querySelectorAll("#layer");
 const header = document.querySelector("#header");
 const padding = document.querySelector(".Layers");
 const main = document.querySelector("main");
-
+const downContent = document.querySelector("#downContent");
 
 let float = false;
+let light = false;
 
 // const heightMain = ((-1.25 * main.offsetHeight) + 850);
 // const heightMain = (main.offsetHeight * 0.25);
@@ -21,7 +22,7 @@ function headerFloat(){
     header.style.position = 'fixed';
     header.style.width = '40%';
     header.style.left = '0px';
-    header.firstElementChild.style.fontSize = 'calc(3vmin + 0.2em)';
+    header.firstElementChild.style.fontSize = 'calc(2vmin + 0.3em)';
 
     float = true;
 }
@@ -37,21 +38,31 @@ function Scroll(){
     let scrollTop = document.documentElement.scrollTop;
     
 
-    parallax[0].style.transform = 'translateY(' + scrollTop * 0.6 + 'px)';
+    parallax[0].style.transform = 'translateY(' + scrollTop * 0.5 + 'px)';
     parallax[2].style.transform = 'translateY(' + scrollTop * 0.3 + 'px)';
     parallax[3].style.transform = 'translateY(' + scrollTop * 0.3 + 'px)';
     parallax[1].style.transform = 'translateY(' + scrollTop * 0.3 + 'px)';
     parallax[4].style.transform = 'translateY(' + scrollTop * 0.1 + 'px)';
 
     
-    // if(scrollTop > 65 && !float) {
-    //     headerFloat();
-    //     console.log("cambio");
-    // }
-    // else if(scrollTop < 65 && float) {
-    //     headerAbsolute();
-    //     console.log("cambio");
-    // } 
+    if(scrollTop > 65 && !float) {
+        headerFloat();
+        console.log("cambio");
+    }
+    else if(scrollTop < 65 && float) {
+        headerAbsolute();
+        console.log("cambio");
+    }
+    if(scrollTop > (window.innerHeight * 0.7) && !light){
+        console.log("Iluminar")
+        downContent.style.backgroundColor = "#050335";
+        light = true
+    } 
+    else if(scrollTop < (window.innerHeight * 0.3) && light){
+        console.log("Oscurecer")
+        downContent.style.backgroundColor = "#000";
+        light = false
+    }
 
 }
 
