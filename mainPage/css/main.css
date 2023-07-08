@@ -203,13 +203,13 @@ main{
 .description{
     position: relative;
     background-color: #050335;
-    background-color: inherit;
-    min-height: 110vh;
     width: 100%;
     padding-top: 5%;
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: linear;
+
+    overflow: hidden;
 }
 .description::before{
     display: block;
@@ -283,13 +283,4 @@ main{
 .about__img-back{
     width: 70%;
     height: 100%;
-}
-
-
-.divider{
-    margin: auto;
-    position: absolute;
-    width: 90%;
-    background-color: #fff;
-    height: 1px;
 }

@@ -1,0 +1,169 @@
+[name="radio-btn"]{
+    display: none;
+}
+
+.slider {
+    margin: 200px 20px;
+    height: 60vh;
+    position: relative;
+    perspective: 0;
+    transform-style: flat;
+    overflow: hidden;
+}
+
+.slider img {
+    position: relative;
+    object-fit: cover;
+}
+
+.slider h2 {
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    font-size: 40pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000;
+    background: #fff;
+}
+
+.slider label {
+    margin: auto;
+    width: 20%;
+    min-width: min-content;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform .5s linear, width .5s linear, opacity .1s .2s;
+    z-index: 0;
+    overflow: hidden;
+    /* box-shadow: 4px 4px 10px #000a; */
+}
+
+.slider label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* box-shadow: inset 4px 4px 10px #fff6; */
+    pointer-events: none;
+}
+
+/* Left to Right */
+#input1:checked~#slide4,
+#input2:checked~#slide5,
+#input3:checked~#slide1,
+#input4:checked~#slide2,
+#input5:checked~#slide3 {
+    transform: translate(-100vw, 0);
+    z-index: 0;
+    opacity: 0;
+}
+
+#input1:checked~#slide5,
+#input2:checked~#slide1,
+#input3:checked~#slide2,
+#input4:checked~#slide3,
+#input5:checked~#slide4 {
+    transform: translate(-200%, 0);
+    z-index: 50;
+}
+
+/* Center Item */
+#input1:checked~#slide1,
+#input2:checked~#slide2,
+#input3:checked~#slide3,
+#input4:checked~#slide4,
+#input5:checked~#slide5 {
+    z-index: 100;
+    transform: translate(0, 0);
+    /* transition: transform .5s linear, width .5s linear .6s; */
+    transition: transform .5s linear;
+}
+
+
+#input1:checked~#slide2,
+#input2:checked~#slide3,
+#input3:checked~#slide4,
+#input4:checked~#slide5,
+#input5:checked~#slide1 {
+    transform: translate(200%, 0);
+    z-index: 50;
+}
+
+
+#input1:checked~#slide3,
+#input2:checked~#slide4,
+#input3:checked~#slide5,
+#input4:checked~#slide1,
+#input5:checked~#slide2 {
+    transform: translate(100vw, 0);
+    z-index: 0;
+    opacity: 0;
+}
+
+.expandContainer {
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-delay: .6s;
+    animation-fill-mode: both;
+}
+
+.reverse {
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+}
+
+/* #input1~#slide1,
+#input2~#slide2,
+#input3~#slide3,
+#input4~#slide4,
+#input5~#slide5 {
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+} */
+
+#input1:checked~#slide1,
+#input2:checked~#slide2,
+#input3:checked~#slide3,
+#input4:checked~#slide4,
+#input5:checked~#slide5 {
+    animation-name: expand;
+    animation-duration: 0.5s;
+    animation-delay: .6s;
+    animation-fill-mode: both;
+}
+
+.collapsed {
+    animation-name: collapse;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes collapse {
+    from {
+        width: 50%;
+    }
+
+    to {
+        width: 20%;
+    }
+}
+
+@keyframes expand {
+    from {
+        width: 20%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
