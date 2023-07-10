@@ -36,7 +36,7 @@
     left: 0;
     right: 0;
     cursor: pointer;
-    transition: transform .5s linear, width .5s linear, opacity .1s .2s;
+    transition: transform .5s .3s linear, width .5s linear, opacity .1s .6s;
     z-index: 0;
     overflow: hidden;
     /* box-shadow: 4px 4px 10px #000a; */
@@ -82,7 +82,6 @@
     z-index: 100;
     transform: translate(0, 0);
     /* transition: transform .5s linear, width .5s linear .6s; */
-    transition: transform .5s linear;
 }
 
 
@@ -106,31 +105,6 @@
     opacity: 0;
 }
 
-.expandContainer {
-    animation-name: expand;
-    animation-duration: 0.5s;
-    animation-delay: .6s;
-    animation-fill-mode: both;
-}
-
-.reverse {
-    animation-name: expand;
-    animation-duration: 0.5s;
-    animation-direction: reverse;
-    animation-fill-mode: both;
-}
-
-/* #input1~#slide1,
-#input2~#slide2,
-#input3~#slide3,
-#input4~#slide4,
-#input5~#slide5 {
-    animation-name: expand;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-direction: reverse;
-} */
-
 #input1:checked~#slide1,
 #input2:checked~#slide2,
 #input3:checked~#slide3,
@@ -138,13 +112,13 @@
 #input5:checked~#slide5 {
     animation-name: expand;
     animation-duration: 0.5s;
-    animation-delay: .6s;
+    animation-delay: .9s;
     animation-fill-mode: both;
 }
 
 .collapsed {
     animation-name: collapse;
-    animation-duration: 0.5s;
+    animation-duration: 0.4s;
     animation-fill-mode: both;
 }
 
