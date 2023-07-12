@@ -199,12 +199,12 @@ main{
     z-index: 100;
 }
 
-
+/* Objects below the landscape */
 .description{
     position: relative;
     background-color: #050335;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 10%;
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: linear;
@@ -221,6 +221,7 @@ main{
     background: linear-gradient(to bottom, #000, transparent);
 }
 
+/* About me Section */
 .about{
     margin: 80px auto;
     width: 85%;
@@ -249,7 +250,7 @@ main{
     color: #fff;
 }
 
-.about__text h2{
+.description h2{
     color: rgba(255, 255, 255, .4);
     font-size: 38pt;
     font-family: var(--font-type_txt);
@@ -278,9 +279,32 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .about__img-back{
     width: 70%;
     height: 100%;
+}
+
+
+
+/* My projects section */
+.projects{
+    position: relative;
+    margin: 200px 0 100px 0;
+    text-align: center;
+}
+
+.projects > h2{
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.backLogo{
+    z-index: 0;
+    position: absolute;
+    width: 110vmin;
+    right: 0;
+    top: 0;
+    opacity: .2;
+    translate: 35% -10%;
 }

@@ -47,19 +47,15 @@ function Scroll(){
     
     if(scrollTop > 65 && !float) {
         headerFloat();
-        console.log("cambio");
     }
     else if(scrollTop < 65 && float) {
         headerAbsolute();
-        console.log("cambio");
     }
     if(scrollTop > (window.innerHeight * 0.7) && !light){
-        console.log("Iluminar")
         downContent.style.backgroundColor = "#050335";
         light = true
     } 
     else if(scrollTop < (window.innerHeight * 0.3) && light){
-        console.log("Oscurecer")
         downContent.style.backgroundColor = "#000";
         light = false
     }

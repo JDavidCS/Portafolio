@@ -33,7 +33,6 @@ function updateChecked(){
     let checked = null;
     ListInput.forEach(el =>{
         if(el.checked){
-            console.log(el);
             checked = el
         }
     })

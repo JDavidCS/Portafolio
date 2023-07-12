@@ -2,16 +2,15 @@
     display: none;
 }
 
-.slider {
-    margin: 200px 20px;
-    height: 60vh;
+.slider{
+    height: 65vh;
     position: relative;
     perspective: 0;
     transform-style: flat;
     overflow: none;
 }
-
 .slide img {
+    display: none;
     z-index: 50;
     position: relative;
     object-fit: cover;
@@ -39,7 +38,9 @@
     transition: transform .5s .4s linear, width .5s linear, opacity .1s .6s;
     z-index: 0;
     overflow: hidden;
-    /* box-shadow: 4px 4px 10px #000a; */
+    background-color: #7c7c7c11;
+    backdrop-filter: blur(3px);
+    box-shadow: 4px 4px 10px #0006;
 }
 
 .slide label{
@@ -48,6 +49,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
 }
 
 #input1:checked~#slide1 label,
@@ -58,14 +61,14 @@
     display: none;
 }
 
-.slider label::before {
+.slider .slide::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* box-shadow: inset 4px 4px 10px #fff6; */
+    box-shadow: inset 4px 4px 10px #fff3;
     pointer-events: none;
 }
 
@@ -86,7 +89,7 @@
 #input4:checked~#slide3,
 #input5:checked~#slide4 {
     transform: translate(-200%, 0);
-    transform: translate(calc(-50vw + 50%), 0);
+    transform: translate(calc(-50vw + 55%), 0);
     z-index: 50;
 }
 
@@ -107,7 +110,7 @@
 #input3:checked~#slide4,
 #input4:checked~#slide5,
 #input5:checked~#slide1 {
-    transform: translate(calc(50vw - 50%), 0);
+    transform: translate(calc(50vw - 55%), 0);
     z-index: 50;
 }
 
