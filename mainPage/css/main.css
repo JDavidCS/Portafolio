@@ -203,6 +203,7 @@ main{
 .description{
     position: relative;
     background-color: #050335;
+    background-color: #000;
     width: 100%;
     padding-top: 10%;
     transition-property: background-color;
@@ -309,17 +310,31 @@ main{
     translate: 35% -10%;
 }
 
+.slider__next{
+    position: absolute;
+    right: 0;
+    fill: #fff;
+    height: 100%;
+    width: 70px;
+    z-index: 200;
+
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.slider__next svg{
+    pointer-events:visible;
+}
+
 .slide{
-    transition: transform .5s .4s linear, width .5s linear, opacity .1s .6s;
     z-index: 0;
     overflow: hidden;
     background-color: #7c7c7c11;
     backdrop-filter: blur(3px);
-    box-shadow: 1px 1px 10px #0006;
 
     display: flex;
 }
-
 .slider .slide::before {
     content: "";
     position: absolute;
@@ -327,7 +342,24 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 2px 2px 10px #fff4;
+    box-shadow: inset 0 0 1px #fff4;
+    pointer-events: none;
+    z-index: 9000;
+    transition: box-shadow 1s linear;
+}
+
+#input1:checked~#slide1::before,
+#input2:checked~#slide2::before,
+#input3:checked~#slide3::before,
+#input4:checked~#slide4::before,
+#input5:checked~#slide5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 1px 1px 5px #fff4;
     pointer-events: none;
     z-index: 9000;
 }
@@ -351,10 +383,11 @@ main{
 
 .collapsed__card{
     width: 300px;
+    flex-shrink: 0;
 }
 
 .collapsed__card > img{
-    filter: brightness(0);
+    filter: brightness(1);
     width: 100%;
     height: 45%;
 }
@@ -412,4 +445,14 @@ main{
     height: 70%;
     width: 70%;
     border-radius: 100%;
+}
+
+.description__card{
+    position: relative;
+    flex-shrink:1;
+    flex-grow: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

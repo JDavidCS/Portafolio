@@ -25,6 +25,11 @@
     position: absolute;
     left: 0;
     right: 0;
+    transition: 
+    transform .5s .4s linear, 
+    width .5s linear, 
+    opacity .1s .6s,
+    box-shadow 1s linear;
 }
 
 .slide label{
@@ -61,8 +66,8 @@
 #input3:checked~#slide2,
 #input4:checked~#slide3,
 #input5:checked~#slide4 {
-    transform: translate(-200%, 0);
-    transform: translate(calc(-50vw + 20%), 0);
+    /* transform: translate(-200%, 0); */
+    transform: translate(calc(-50vw + 50%), 0) scale(.9);
     z-index: 50;
 }
 
@@ -74,7 +79,7 @@
 #input5:checked~#slide5 {
     z-index: 100;
     transform: translate(0, 0);
-    /* transition: transform .5s linear, width .5s linear .6s; */
+    box-shadow: 2px 2px 20px #0006;
 }
 
 
@@ -83,7 +88,7 @@
 #input3:checked~#slide4,
 #input4:checked~#slide5,
 #input5:checked~#slide1 {
-    transform: translate(calc(50vw - 20%), 0);
+    transform: translate(calc(50vw - 50%), 0) scale(.9);
     z-index: 50;
 }
 
