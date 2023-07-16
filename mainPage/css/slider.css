@@ -18,7 +18,7 @@
 .slider .slide {
     margin: auto;
     width: 0%;
-    min-width: min-content;
+    min-width: 300px;
     height: 100%;
     max-height: 500px;
     border-radius: 25px;
@@ -124,7 +124,7 @@
 
 @keyframes collapse {
     from {
-        width: 55%;
+        width: 60%;
     }
 
     to {
@@ -138,6 +138,6 @@
     }
 
     to {
-        width: 55%;
+        width: 60%;
     }
 }
