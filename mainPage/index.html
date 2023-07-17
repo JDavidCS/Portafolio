@@ -65,11 +65,20 @@
             <img src="./img/Recurso 1.png" alt="" class="backLogo">
             <h2>My projects</h2>
             <section class="slider">
-                <div class="slider__previous"></div>
-                <div class="slider__next">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                        <path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z" />
-                    </svg>
+                
+                <div class="slider__previous" id="slider-nav-btn">
+                    <div class="slider__nav-button" id="btn-previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="slider__next" id="slider-nav-btn">
+                    <div class="slider__nav-button" id="btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z" />
+                        </svg>
+                    </div>
                 </div>
 
                 <input type="radio" name="radio-btn" id="input1" data-number="1" checked>
@@ -79,7 +88,7 @@
                 <input type="radio" name="radio-btn" id="input5" data-number="5">
             
                 <!-- SLIDE #1 IS THE MODEL IM WORKING ON -->
-                <div id="slide1" class="slide">
+                <div id="slide1" class="slide" data-projectName="">
                     <label for="input1" id="slide1"></label>
                     <div class="collapsed__card">
                         <img src="https://cdn.pixabay.com/photo/2017/11/29/18/54/leaf-2986837_1280.jpg" alt="">
@@ -102,16 +111,15 @@
                         </div>
                         <div class="collapsed__card-sources">
                             <ul>
-                                <a href="">
-                                    <li title="github">
+                                <li title="github">
+                                    <a href="">
                                         <img src="./img/github.svg" alt="github logo">
-                                    </li>
-                                </a>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="description__card">
-                        <!-- DESCRITION OF THE PROJECT GOES HERE, remember, this section will collapse. So, you will have to find out the way to do that -->
                         <h2>Description</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nulla non. Ullam nihil provident fuga ea illum. Aspernatur, corrupti! Cupiditate ipsam voluptatem exercitationem! Molestiae porro ea maxime doloremque, deserunt vel.

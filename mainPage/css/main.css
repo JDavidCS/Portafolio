@@ -310,25 +310,55 @@ main{
     translate: 35% -10%;
 }
 
-.slider__next{
+.slider__next, .slider__previous{
     position: absolute;
-    right: 0;
     fill: #fff;
     height: 100%;
     width: 70px;
     z-index: 200;
-
+    
     pointer-events: none;
     display: flex;
     align-items: center;
 }
 
-.slider__next svg{
+.slider__next{
+    right: 0;
+}
+.slider__previous{
+    left: 0;
+}
+
+.slider__nav-button{
+    width: 60px;
+    height: 70px;
+    position: relative;
     pointer-events:visible;
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+    background-color: #000a;
+    border: solid 2px #fff;
+    border-radius: 5px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.slider__previous{
+    justify-content: end;
+}
+.slider__previous .slider__nav-button{
+    transform: rotateZ(180deg);
+}
+
+#slider-nav-btn {
+    display: none;
 }
 
 .slide{
     z-index: 0;
+    max-width: 800px;
     overflow: hidden;
     background-color: #7c7c7c11;
     backdrop-filter: blur(3px);
@@ -436,11 +466,17 @@ main{
     width: 50px;
     margin: 0 0 20px 30px;
     overflow: hidden;
+    
+}
+.collapsed__card-sources a {
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .collapsed__card-sources img{
     height: 70%;
     width: 70%;
@@ -449,10 +485,13 @@ main{
 
 .description__card{
     width: 404px;
+    min-width: none;
     position: relative;
     flex-shrink: 0;
     flex-grow: 1;
     padding: 20px 30px;
+    background-color: #050335aa;
+    backdrop-filter: blur(5px);
 
     display: flex;
     flex-direction: column;
@@ -488,4 +527,14 @@ main{
     background-color: #7c7c7c55;
     width: 100%;
     height: 120px;
+}
+
+
+@media (max-width: 990px) {
+    #slider-nav-btn{
+        display: flex;
+    }
+    .slide label{
+        display: none;
+    }
 }
