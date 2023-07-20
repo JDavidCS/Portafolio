@@ -314,7 +314,7 @@ main{
     position: absolute;
     fill: #fff;
     height: 100%;
-    width: 70px;
+    width: 100px;
     z-index: 200;
     
     pointer-events: none;
@@ -330,15 +330,12 @@ main{
 }
 
 .slider__nav-button{
-    width: 60px;
+    width: 100px;
     height: 70px;
     position: relative;
     pointer-events:visible;
     cursor: pointer;
 
-    backdrop-filter: blur(5px);
-    background-color: #000a;
-    border: solid 2px #fff;
     border-radius: 5px;
     
     display: flex;
@@ -356,9 +353,13 @@ main{
     display: none;
 }
 
-.slide{
+.slide, .phone__card{
     z-index: 0;
     max-width: 800px;
+    border-radius: 25px;
+    height: 412px;
+    width: 0%;
+    min-width: 300px;
     overflow: hidden;
     background-color: #7c7c7c11;
     backdrop-filter: blur(3px);
@@ -394,7 +395,7 @@ main{
     z-index: 9000;
 }
 
-.slide h2 {
+.slide h2, .phone__card h2 {
     margin: 0;
     position: relative;
     font-weight: 400;
@@ -529,6 +530,34 @@ main{
     height: 120px;
 }
 
+
+/* PROJECTS FOR MOVILE */
+
+.projects_phone{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 850px){
+    .slider{
+        display: none;
+    }
+    .projects_phone{
+        display: flex;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about__img{
+        width: 70%;
+    }
+}
 
 @media (max-width: 990px) {
     #slider-nav-btn{

@@ -9,20 +9,8 @@
     transform-style: flat;
     overflow: none;
 }
-/* .slide > img {
-    z-index: 50;
-    position: relative;
-    object-fit: cover;
-} */
-
 .slider .slide {
     margin: auto;
-    width: 0%;
-    min-width: 300px;
-    min-height: max-content;
-    height: 412px;
-    max-height: 500px;
-    border-radius: 25px;
     position: absolute;
     left: 0;
     right: 0;
