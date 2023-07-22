@@ -291,13 +291,13 @@ main{
 /* My projects section */
 .projects{
     position: relative;
-    margin: 200px 0 100px 0;
+    margin: 150px 0 100px 0;
     text-align: center;
 }
 
 .projects > h2{
     position: relative;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .backLogo{
@@ -362,37 +362,10 @@ main{
     min-width: 300px;
     overflow: hidden;
     background-color: #7c7c7c11;
+    /* border: solid 2px #fff; */
     backdrop-filter: blur(3px);
 
     display: flex;
-}
-.slider .slide::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 1px #fff4;
-    pointer-events: none;
-    z-index: 9000;
-    transition: box-shadow 1s linear;
-}
-
-#input1:checked~#slide1::before,
-#input2:checked~#slide2::before,
-#input3:checked~#slide3::before,
-#input4:checked~#slide4::before,
-#input5:checked~#slide5::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 1px 1px 5px #fff4;
-    pointer-events: none;
-    z-index: 9000;
 }
 
 .slide h2, .phone__card h2 {
@@ -524,12 +497,25 @@ main{
     color: #aaa;
 }
 .card-gallery__bar{
+    position: relative;
     border-radius: 20px;
     background-color: #7c7c7c55;
     width: 100%;
     height: 120px;
+    padding-inline: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 20px;
 }
 
+.gallery__bar-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #ddd;
+}
 
 /* PROJECTS FOR MOVILE */
 
