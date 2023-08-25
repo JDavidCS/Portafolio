@@ -15,8 +15,8 @@
     left: 0;
     right: 0;
     transition: 
-        transform .5s .4s linear, 
-        width .5s linear, 
+        transform .4s .3s linear, 
+        width .4s linear, 
         opacity .1s .6s,
         box-shadow 1s linear;
 }
@@ -68,7 +68,7 @@
 #input5:checked~#slide5 {
     z-index: 100;
     transform: translate(0, 0);
-    box-shadow: 2px 2px 20px #0006;
+    box-shadow: 2px 2px 20px #fff3;
     /* box-shadow: 0 0px 10px 0px white; */
 }
 
@@ -99,18 +99,23 @@
 #input4:checked~#slide4,
 #input5:checked~#slide5 {
     animation-name: expand;
-    animation-duration: 0.5s;
-    animation-delay: .9s;
+    animation-duration: 0.4s;
+    animation-delay: .6s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0, .28, 0, .38);
 }
 
 .collapsed {
     animation-name: collapse;
-    animation-duration: 0.4s;
+    animation-duration: 0.3s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(1, .67, 1, .6);
 }
+
+/* TO MAKE THE SLIDE SCALABLE */
+/* .slide__radio-btn:nth-of-type(1){
+    display: none;
+} */
 
 @keyframes collapse {
     from {

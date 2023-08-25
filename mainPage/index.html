@@ -36,7 +36,7 @@
         </div>
     </main>
     <section class="description" id="downContent">
-        <div class="about">
+        <section class="about">
             <div class="about__text">
                 <h2>¡Hola! Soy David.</h2>
                 <p>
@@ -60,7 +60,7 @@
                     <img src="./img/SVG_rounded.svg" alt="Personal Logo">
                 </div>
             </div>
-        </div>
+        </section>
         <section class="projects">
             <img src="./img/Recurso 1.png" alt="" class="backLogo">
             <h2>My projects</h2>
@@ -80,13 +80,13 @@
                         </svg>
                     </div>
                 </div>
-
-                <input type="radio" name="radio-btn" id="input1" data-number="1" checked>
-                <input type="radio" name="radio-btn" id="input2" data-number="2">
-                <input type="radio" name="radio-btn" id="input3" data-number="3">
-                <input type="radio" name="radio-btn" id="input4" data-number="4">
-                <input type="radio" name="radio-btn" id="input5" data-number="5">
-            
+                
+                <input type="radio" name="radio-btn" id="input1" class="slide__radio-btn" data-number="1" checked>
+                <input type="radio" name="radio-btn" id="input2" class="slide__radio-btn" data-number="2">
+                <input type="radio" name="radio-btn" id="input3" class="slide__radio-btn" data-number="3">
+                <input type="radio" name="radio-btn" id="input4" class="slide__radio-btn" data-number="4">
+                <input type="radio" name="radio-btn" id="input5" class="slide__radio-btn" data-number="5">
+                
                 <!-- SLIDE #1 IS THE MODEL IM WORKING ON -->
                 <div id="slide1" class="slide" data-projectName="">
                     <label for="input1" id="slide1"></label>
@@ -364,9 +364,18 @@
                 </div>
             </section>
         </section>
+        <section class="experience">
+            <h2>Experience</h2>
+        </section>
+
+        <!-- Pop Up here  -->
+        <div class="popUp-back">
+            
+        </div>
     </section>
 
-    <script src="js/slider.js"></script>
+    <script src="js/renderCards.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>
