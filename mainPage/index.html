@@ -88,7 +88,7 @@
                 <input type="radio" name="radio-btn" id="input5" class="slide__radio-btn" data-number="5">
                 
                 <!-- SLIDE #1 IS THE MODEL IM WORKING ON -->
-                <div id="slide1" class="slide" data-projectName="">
+                <div id="slide1" class="slide" data-projectID="1">
                     <label for="input1" id="slide1"></label>
                     <div class="collapsed__card">
                         <img src="https://cdn.pixabay.com/photo/2017/11/29/18/54/leaf-2986837_1280.jpg" alt="">
@@ -128,9 +128,11 @@
                             <h3>Gallery</h3>
                             <div class="card-gallery__bar">
                                 <!-- List with the images -->
+                                <img src="https://images.unsplash.com/photo-1690336729872-6e8b665aea8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="gallery__bar-img">
+                                
+                                <!-- <div class="gallery__bar-img"></div>
                                 <div class="gallery__bar-img"></div>
-                                <div class="gallery__bar-img"></div>
-                                <div class="gallery__bar-img"></div>
+                                <div class="gallery__bar-img"></div> -->
                             </div>
                         </div>
                     </div>
@@ -370,12 +372,14 @@
 
         <!-- Pop Up here  -->
         <div class="popUp-back">
-            
+            <div class="next"></div>
+            <div class="previous"></div>
+            <img src="https://images.unsplash.com/photo-1690336729872-6e8b665aea8d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" class="popUp-img">
         </div>
     </section>
 
-    <script src="js/renderCards.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider-buttons.js"></script>
+    <script src="js/render-projects.js"></script>
 </body>
 </html>
