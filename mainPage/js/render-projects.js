@@ -18,7 +18,13 @@ const importData = async() =>{
 const renderGallery = async () =>{
     const data = await importData();
     data.forEach(el => {
-        console.log(el.images)
+        const $galleryBar = document.querySelector(`[data-projectid="${el.dataProjectid}"] .card-gallery__bar`);
+        el.images.forEach(src => {
+            let $img = document.createElement("img");
+            $img.src = src;
+            $img.classList = "gallery__bar-img";
+            $galleryBar.appendChild($img);
+        })
     });
 }
 
