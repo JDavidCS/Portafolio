@@ -527,13 +527,11 @@ main{
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #0008;
     z-index: 1000;
-    backdrop-filter: blur(5px);
 
     justify-content: center;
     align-items: center;
-    
+    pointer-events: none;
 }
 
 .popUp-img{
@@ -541,7 +539,10 @@ main{
     background-color: #000;
     min-width: 200px;
 }
-
+.close__icon svg{
+    fill: #fff;
+    width: 80px;
+}
 /* PROJECTS FOR MOVILE */
 
 .projects_phone{

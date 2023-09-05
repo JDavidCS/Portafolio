@@ -26,9 +26,11 @@ const importData = async() =>{
 const renderCard = async () =>{
     try {
         const $slider = document.querySelector(".slider");
+        const $phoneProjects = document.querySelector(".projects_phone");
         const data = await importData();
         data.forEach(async (el, index) => {
-            const $newCard = await newCard((index+1), el.dataProjectid, el.mainImg, el.name, el.description);
+            const $newCard = await newCard(1, (index+1), el.dataProjectid, el.mainImg, el.name, el.description);
+            const $newCard_phone = await newCard(2, (index+1), el.dataProjectid, el.mainImg, el.name, el.description);
             const $galleryBar = $newCard.querySelector(`.card-gallery__bar`);
             el.images.forEach(src => {
                 const $img = document.createElement("img");
@@ -37,6 +39,7 @@ const renderCard = async () =>{
                 $galleryBar.appendChild($img);
             });
             const $tech = $newCard.querySelector(".collapsed__card-tech ul");
+            const $phoneTech = $newCard_phone.querySelector(".collapsed__card-tech ul");
             el.technologies.forEach((el) =>{
                 const $li = document.createElement("li");
                 const $img = document.createElement("img");
@@ -48,52 +51,94 @@ const renderCard = async () =>{
                 $li.appendChild($p);
 
                 $tech.appendChild($li);
+                $phoneTech.appendChild($li.cloneNode(true));
+            });
+            const $sources = $newCard.querySelector(".collapsed__card-sources ul");
+            const $phoneSources = $newCard_phone.querySelector(".collapsed__card-sources ul");
+            el.sources.forEach((el)=>{
+                const $li = document.createElement("li");
+                const $a = document.createElement("a");
+                $a.href = el.src;
+                const $img = document.createElement("img");
+                $img.src = el.img;
+                $a.appendChild($img);
+                $li.appendChild($a);
+
+                $sources.appendChild($li);
+                $phoneSources.appendChild($li.cloneNode(true));
             })
 
             $slider.appendChild($newCard);
+            $phoneProjects.appendChild($newCard_phone);
         });
+
+        console.log("RENDERIZADO");
+        import("./slider-buttons.js")
         
     } catch (error) {
         
     }
 }
 
-const newCard = async(index, projectid, mainPicture, title, description) =>{
+const newCard = async(option, index, projectid, mainPicture, title, description) => {
 
-    const stringHTML = `
-    <div id="slide${index}" class="slide" data-projectID="${projectid}">
-        <label for="input${index}" id="slide${index}"></label>
-        <div class="collapsed__card">
-            <img src="${mainPicture}" alt="">
-            <h2>${title}</h2>
-            <div class="collapsed__card-tech">
-                <ul>
-                </ul>
+    let stringHTML;
+    if(option == 1){
+        stringHTML = `
+        <div id="slide${index}" class="slide" data-projectID="${projectid}">
+            <label for="input${index}" id="slide${index}"></label>
+            <div class="collapsed__card">
+                <img src="${mainPicture}" alt="">
+                <h2>${title}</h2>
+                <div class="collapsed__card-tech">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="collapsed__card-sources">
+                    <ul><!--
+                        <li title="github">
+                            <a href="">
+                                <img src="./img/github.svg" alt="github logo">
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
             </div>
-            <div class="collapsed__card-sources">
-                <ul><!--
-                    <li title="github">
-                        <a href="">
-                            <img src="./img/github.svg" alt="github logo">
-                        </a>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="description__card">
-            <h2>Description</h2>
-            <p>
-            ${description}
-            </p>
-            <div class="description__card-gallery">
-                <h3>Gallery</h3>
-                <div class="card-gallery__bar">
-                    <!-- List with the images -->
+            <div class="description__card">
+                <h2>Description</h2>
+                <p>
+                ${description}
+                </p>
+                <div class="description__card-gallery">
+                    <h3>Gallery</h3>
+                    <div class="card-gallery__bar">
+                        <!-- List with the images -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    `;
+        `;
+    }
+    else{
+        stringHTML = `
+        <div class="phone__card" data-projectName="">
+            <div class="collapsed__card">
+                <img src="${mainPicture}" alt="">
+                <h2>${title}</h2>
+                <div class="collapsed__card-tech">
+                    <ul>
+                        
+                    </ul>
+                </div>
+                <div class="collapsed__card-sources">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        `;
+    }
 
     const $objectDOM = document.createRange().createContextualFragment(stringHTML);
 
@@ -101,8 +146,9 @@ const newCard = async(index, projectid, mainPicture, title, description) =>{
     return ($objectDOM.children[0]);
 }
 
-renderCard();
+document.addEventListener("DOMContentLoaded", function(){
+    renderCard();
+});
 
-const $new = newCard();
 
 // console.log($new.querySelector(".collapsed__card"));

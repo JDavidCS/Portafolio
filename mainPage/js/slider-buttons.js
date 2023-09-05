@@ -10,10 +10,9 @@
 
 // addEventListener("click", (e)=> console.log(e.target));
 
-
-
+console.log("Comenzando");
 const ListInput = document.querySelectorAll("[name=radio-btn]");
-const ListSlide = document.querySelectorAll(".card");
+const ListSlide = document.querySelectorAll(".slide");
 const $slider = document.querySelector(".slider");
 
 const $next = document.querySelector('#btn-next');
@@ -21,6 +20,8 @@ const $previous = document.querySelector('#btn-previous');
 
 let $checkedIndex = 0;
 let $checkedItem = updateChecked();
+
+
 
 $slider.addEventListener('change', ()=>{
 
@@ -36,7 +37,7 @@ $slider.addEventListener('change', ()=>{
 
 $next.addEventListener('click', ()=>{
 
-    if(ListInput.length > $checkedIndex+1){
+    if(ListSlide.length > $checkedIndex+1){
         ListInput[$checkedIndex+1].checked = true;
     }else{
         $checkedIndex = 0;
@@ -58,7 +59,7 @@ $previous.addEventListener('click', ()=>{
     if($checkedIndex != 0){
             ListInput[$checkedIndex-1].checked = true;
     }else{
-        $checkedIndex = ListInput.length-1;
+        $checkedIndex = ListSlide.length-1;
         ListInput[$checkedIndex].checked = true;
     }
 
@@ -78,10 +79,11 @@ function updateChecked(){
 
 function updateAnimation(){
     const $card = document.querySelector(`#slide${$checkedItem.dataset.number}`);
-
+    
     $card.classList.add('collapsed');
     $card.addEventListener('transitionend', function() {
         $card.classList.remove('collapsed');
     });
     $checkedItem = updateChecked();
 }
+
