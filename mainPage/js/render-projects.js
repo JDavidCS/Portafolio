@@ -73,10 +73,12 @@ const renderCard = async () =>{
         });
 
         console.log("RENDERIZADO");
-        import("./slider-buttons.js")
+        import("./slider-buttons.js");
+        // Script para el popUp
+        import("./popUp.js");
         
     } catch (error) {
-        
+        console.error("Error intentando renderizar la informacion: ", error);
     }
 }
 
