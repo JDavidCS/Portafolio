@@ -27,6 +27,7 @@ $nextButton.addEventListener("click", (ev)=>{
     if($currentIMG.nextElementSibling != null){
         $img.src = $currentIMG.nextElementSibling.src;
         $currentIMG = $currentIMG.nextElementSibling;
+        displayButton();
     }
 });
 $previousButton.addEventListener("click", (ev)=>{
@@ -34,6 +35,7 @@ $previousButton.addEventListener("click", (ev)=>{
     if($currentIMG.previousElementSibling != null){
         $img.src = $currentIMG.previousElementSibling.src;
         $currentIMG = $currentIMG.previousElementSibling;
+        displayButton();
     }
 });
 
@@ -44,5 +46,15 @@ function handlePopUp(ev){
         $currentIMG = ev.target;
         $popUpBack.style.display = "flex";
         $img.src = ev.target.src;
+        displayButton();
     }
+}
+
+function displayButton(){
+    $currentIMG.previousElementSibling == null? 
+    $previousButton.style.fill = "#fff5" :
+    $previousButton.style.fill = "#fff";
+    $currentIMG.nextElementSibling == null?
+    $nextButton.style.fill = "#fff5":
+    $nextButton.style.fill = "#fff";
 }

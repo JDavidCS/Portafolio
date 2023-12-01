@@ -62,4 +62,9 @@ function Scroll(){
 
 }
 
-window.addEventListener('scroll', Scroll);
+window.addEventListener('scroll', ()=>{
+    if(document.documentElement.scrollTop < window.innerHeight + 50){
+        Scroll();
+    }
+});
+Scroll();

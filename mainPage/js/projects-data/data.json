@@ -35,11 +35,43 @@
         {
           "dataProjectid": "2",
           "name": "Portafolio and Personal Image",
-          "mainImg": "https://cdn.pixabay.com/photo/2017/11/29/18/54/leaf-2986837_1280.jpg",
+          "mainImg": "https://images.unsplash.com/photo-1693677291570-a0627c748774?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "images": [
             "https://images.unsplash.com/photo-1697723678949-5184d37f11ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D",
             "https://images.unsplash.com/photo-1697637601495-ecf5e16da56f?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "https://images.unsplash.com/photo-1697723831958-63bbdbe09962?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fHw%3D"
+            "https://images.unsplash.com/photo-1624267439301-8147fff1a23d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          ],
+          "technologies": [
+            {
+              "name": "HTML",
+              "img": "./img/html.svg"
+            },
+            {
+              "name": "CSS",
+              "img": "./img/css.svg"
+            },
+            {
+              "name": "JS",
+              "img": "./img/javascript.svg"
+            }
+          ],
+          "sources": [
+            {
+              "name": "github",
+              "src": "",
+              "img": "./img/github.svg"
+            }
+          ],
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nulla non. Ullam nihil provident fuga ea illum. Aspernatur, corrupti! Cupiditate ipsam voluptatem exercitationem! Molestiae porro ea maxime doloremque, deserunt vel."
+        },
+        {
+          "dataProjectid": "3",
+          "name": "Portafolio and Personal Image",
+          "mainImg": "https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D",
+          "images": [
+            "https://images.unsplash.com/photo-1697723678949-5184d37f11ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1697637601495-ecf5e16da56f?q=80&w=2028&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "https://images.unsplash.com/photo-1624267439301-8147fff1a23d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           ],
           "technologies": [
             {
@@ -64,5 +96,6 @@
           ],
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nulla non. Ullam nihil provident fuga ea illum. Aspernatur, corrupti! Cupiditate ipsam voluptatem exercitationem! Molestiae porro ea maxime doloremque, deserunt vel."
         }
+
     ]
 }
