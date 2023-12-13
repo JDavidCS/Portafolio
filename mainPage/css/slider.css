@@ -91,15 +91,6 @@
     /* box-shadow: 0 0px 10px 0px white; */
 }
 
-#input1:checked~#slide1::after,
-#input2:checked~#slide2::after,
-#input3:checked~#slide3::after,
-#input4:checked~#slide4::after,
-#input5:checked~#slide5::after{
-    box-shadow: inset 4px 4px 5px 0px #fff3;
-}
-
-
 #input1:checked~#slide2,
 #input2:checked~#slide3,
 #input3:checked~#slide4,

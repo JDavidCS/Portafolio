@@ -253,7 +253,7 @@ main{
 
 .description h2{
     color: rgba(255, 255, 255, .4);
-    font-size: 38pt;
+    font-size: 28pt;
     font-family: var(--font-type_txt);
     line-height: 1em;
 }
@@ -517,7 +517,6 @@ main{
     cursor: pointer;
     flex-shrink: 0;
     image-rendering: optimizeSpeed;
-    box-shadow: 2px 2px 10px 2px #222;
 }
 
 
@@ -632,7 +631,7 @@ main{
 /* EXPERIENCE */
 
 .experience{
-    height: 200vh;
+    height: max-content;
     overflow-y: scroll;
     scroll-margin: 0;
     background: url(../img/stacked-waves-haikei4.svg);
@@ -640,17 +639,19 @@ main{
     background-size: cover;
     font-family: var(--font-type_txt);
     color: #fff;
-
 }
 .experience h2{
     text-align: center;
 }
-.allJobs{
-
+.allJobs p, .allJobs h3, .allJobs h4{
+    margin: 0;
 }
 .newJob{
     display: flex;
     flex-direction: row;
+    gap: 8%;
+    justify-content: center;
+    margin-block: 100px;
 }
 .newJob:nth-child(odd) > .newJob-title{
     text-align: right;
@@ -659,27 +660,101 @@ main{
     flex-direction: row-reverse;
 }
 
+.newJob-title h4{
+    margin-block: 10px;
+}
+
+.newJob-description p{
+    font-weight: 300;
+}
+.newJob-description h3{
+    margin: 20px;
+    font-weight: 500;
+    font-size: 1.6em;
+    opacity: .4;
+}
+
 .newJob:nth-child(even) > .newJob-description{
     text-align: right;
 }
 
 .newJob-description{
-    width: 50%;
-    padding-right: 50px;
+    width: 40%;
 }
 .newJob-title{
-    flex-grow: 1;
+    flex-grow: 0;
 }
 .newJob-title h3{
     font-family: var(--font-type_deco);
-    font-size: 20pt;
+    font-size: 5.5vmin;
+    font-weight: 100;
 }
 .newJob-title h4{
     font-family: var(--font-type_txt);
     font-weight: 600;
 }
-.newJob-title:nth-child(1) > h4{
+
+.newJob:nth-child(1) > .newJob-title h4{
     color: #D2492B;
+}
+.newJob:nth-child(2)>.newJob-title h4 {
+    color: #38D22B;
+}
+
+/* FOOTER */
+
+footer{
+    height: 300px;
+    background-color: #000008;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--font-type_txt);
+}
+footer h4{
+    font-size: 20pt;
+    opacity: .4;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    position: relative;
+    padding: 8px;
+    overflow: visible;
+}
+footer a{
+    color: #aaa;
+}
+footer li::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -30px;
+    top: 0;
+    height: 25px;
+    width: 25px;
+    background: url(../img/Instagram.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.source-github::before{
+    background-image: url(../img/github.svg);
+}
+.source-linkedin::before{
+    background-image: url(../img/linkedin.svg);
+}
+.source-mail::before{
+    background-image: url(../img/outline-mail.svg);
+    width: 30px;
+    height: 30px;
+}
+.source-whatsapp::before{
+    background-image: url(../img/outline-whatsapp.svg);
+    width: 30px;
+    height: 30px;
 }
 
 @media (max-width: 850px){
